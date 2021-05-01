@@ -1,64 +1,52 @@
 
-(function ($) {
-    "use strict";
 
-    /*==================================================================
-    [ Validate ]*/
-    var input = $('.validate-input .input100');
-
-    $('.validate-form').on('submit',function(){
-        var check = true;
-
-        for(var i=0; i<input.length; i++) {
-            if(validate(input[i]) == false){
-                showValidate(input[i]);
-                check=false;
-            }
-        }
-
-        return check;
-    });
-
-
-    $('.validate-form .input100').each(function(){
-        $(this).focus(function(){
-           hideValidate(this);
+	$(document).ready(function () {
+		$(document).on("scroll", onScroll);
+ 
+		$('a[href^="#"]').on('click', function (e) {
+			e.preventDefault();
+			$(document).off("scroll");
+ 
+			$('a').each(function () {
+				$(this).removeClass('navactive');
+			})
+			$(this).addClass('navactive');
+ 
+			var target = this.hash;
+			$target = $(target);
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top+2
+			}, 500, 'swing', function () {
+				window.location.hash = target;
+				$(document).on("scroll", onScroll);
+			});
+		});
+	});
+ 
+	function onScroll(event){
+		var scrollPosition = $(document).scrollTop();
+		$('.nav li a').each(function () {
+			var currentLink = $(this);
+			var refElement = $(currentLink.attr("href"));
+			if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+				$('ul.nav li a').removeClass("navactive");
+				currentLink.addClass("navactive");
+			}
+			else{
+				currentLink.removeClass("navactive");
+			}
+		});
+	
+       
+        $(function(){
+            $('#portfolio').mixitup({
+                targetSelector: '.item',
+                transitionSpeed: 350
+            });
         });
-    });
 
-    function validate (input) {
-        if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
-            if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
-                return false;
-            }
-        }
-        else {
-            if($(input).val().trim() == ''){
-                return false;
-            }
-        }
-    }
-
-    function showValidate(input) {
-        var thisAlert = $(input).parent();
-
-        $(thisAlert).addClass('alert-validate');
-    }
-
-    function hideValidate(input) {
-        var thisAlert = $(input).parent();
-
-        $(thisAlert).removeClass('alert-validate');
-    }
-
-    /*==================================================================
-    [ Modal ]*/
-    $('.modal-subscribe').on('click',function(e){
-        e.stopPropagation();
-    })
+          $(function() {
+            $( "#datepicker" ).datepicker();
+        });
     
-    $('.btn-close-modal').on('click', function(){
-        $('#subscribe').modal('hide');
-    });
-
-})(jQuery);
+    };
