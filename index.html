@@ -54,8 +54,8 @@
         <div id="top" class="starter_container bg">
             <div class="follow_container">
                 <div class="col-md-6 col-md-offset-3">
-                    <h2 class="top-title"> Restaurant</h2>
-                    <h2 class="white second-title">" Best in the city "</h2>
+                    <h2 class="top-title"> Anything La Corner</h2>
+                    <h2 class="white second-title">" Best Corner in the city "</h2>
                     <hr>
                 </div>
             </div>
@@ -239,7 +239,7 @@
                     <div class="col-md-12">
                         <div class="inner contact">
                             <!-- Form Area -->
-                            < class="contact-form">
+                            <div class="contact-form">
                                 <!-- Form -->
                                 <form id="" method="post" action="contact.php">
                                     <div class="text-content container">
@@ -335,40 +335,34 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-                                            </div>
+                                            </div><br>
                                     <!-- Left Inputs -->
-                                    <div class="col-md-6 ">
-                                        <!-- Name -->
-                                        <input type="text" name="orderName" id="orderName" required="required" class="form" placeholder="Name" />
-                                        <!-- Email -->
-                                        <input type="email" name="orderMail" id="orderMail" required="required" class="form" placeholder="Email" />
-                                        <!-- Subject -->
-
-                                    </div><!-- End Left Inputs -->
-                                            <!--Cart -->
+                                            <!-- Left Inputs -->
                                             <div class="col-md-6 ">
-
-
-                                                </div>
-
-                                            </div>
-                                    <!-- Right Inputs -->
-                                    <div class="col-md-6">
-                                        <!-- Message -->
-                                        <textarea name="address" id="address" class="form textarea"  placeholder="Address"></textarea>
-                                    </div><!-- End Right Inputs -->
-                                    <!-- Bottom Submit -->
-                                    <input type="radio" id="cash" name="paymentType" value="cash">
-                                    <label for="cash">Cash</label>
-                                    <input type="radio" id="creditCard" name="paymentType" value="creditCard">
-                                    <label for="creditCard">Credit Card</label><br>
+                                                <!-- Name -->
+                                                <input type="text" name="orderName" id="orderName" required="required" class="form" placeholder="Name" />
+                                                <!-- Email -->
+                                                <input type="email" name="orderEmail" id="orderEmail" required="required" class="form" placeholder="Email" />
+                                                <!-- Subject -->
+                                                <input type="number" name="PhoneNumber" id="phoneNumber" required="required" class="form" placeholder="Phone Number" />
+                                            </div><!-- End Left Inputs -->
+                                            <!-- Right Inputs -->
+                                            <div class="col-md-6">
+                                                <!-- Message -->
+                                                <textarea name="address" id="address" class="form textarea"  placeholder="Address"></textarea>
+                                            </div><!-- End Right Inputs -->
 
                                     <div class="relative fullwidth col-xs-12">
+                                        <input type="radio" id="cash" name="paymentType" value="cash">
+                                        <label for="cash">Cash</label>
+                                        <input type="radio" id="creditCard" name="paymentType" value="creditCard">
+                                        <label for="creditCard">Credit Card</label><br>
+
                                         <!-- Send Button -->
                                         <button type="submit" id="orderSubmit" name="orderSubmit" class="form-btn">Order!</button>
                                     </div><!-- End Bottom Submit -->
                                     <!-- Clear -->
-                                            <div class="clear"></div></div>
+                                        <div class="clear"></div></div></div>
                                 </form>
                             </div><!-- End Contact Form Area -->
                         </div><!-- End Inner -->
