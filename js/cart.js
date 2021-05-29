@@ -2,10 +2,10 @@
  * Cart Operations
  */
 var totalCost = 0;
-var items = [{itemID:"homemade_pizza", name:"Homemade Pizza",quantity:1, price:17},{itemID:"fried_onion", name:"Fried Onion",quantity:1, price:17},
-    {itemID:"fried_patty", name:"Fried Patty",quantity:1, price:19},{itemID:"fried_chicken", name:"Fried chicken",quantity:1, price:21},
-    {itemID:"homemade_hamburger", name:"Homemade Burger",quantity:1, price:23},{itemID:"cooked_cheese", name:"Cooked Cheese",quantity:1, price:20},
-    {itemID:"fruit_plate", name:"Fruit Plate",quantity:1, price:25},{itemID:"french_fries", name:"French Fries & Dip",quantity:1, price:24}]
+var items = [{itemID:"chicken_sambal", name:"Chicken Sambal",quantity:1, price:5.5},{itemID:"roti_planta", name:"Roti Planta",quantity:1, price:9.5},
+    {itemID:"mamak_rojak", name:"Mamak Rojak",quantity:1, price:9.9},{itemID:"nasi_goreng", name:"Nasi Goreng Pattaya",quantity:1, price:11.5},
+    {itemID:"stylo_milo", name:"Stylo Milo",quantity:1, price:4.5},{itemID:"cendol", name:"Cendol",quantity:1, price:7},
+    {itemID:"fish_curry", name:"Fish Curry",quantity:1, price:6.5},{itemID:"murtabak", name:"Murtabak",quantity:1, price:13}]
 
 
 function addItem(itemID) {
